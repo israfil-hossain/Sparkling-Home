@@ -34,7 +34,7 @@ const MainStepper = (props: Props) => {
       case 3:
         return <Address />
       case 4:
-        return <Payment />
+        return <Address />
       default:
     }
   }
@@ -154,6 +154,7 @@ const MainStepper = (props: Props) => {
             </div>
           </CardContent>
         </Card>
+        
         <div className='lg:w-[472px] w-full px-4 hidden lg:flex flex-col'>
           <AccordionSection accordionTitle={accordionTitle} accordion={accordion}/>
         </div>

@@ -16,13 +16,13 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <ul className='flex flex-row items-center justify-center px-4'>
+    <ul className='flex flex-row items-center justify-center px-4 rounded-0 '>
       {i18n.locales.map((locale) => {
         return (
           <li key={locale}>
             <Link
               href={redirectedPathName(locale)}
-              className={`${PATH === `${locale}` ? "bg-primary" : "bg-gray text-black"} px-3 py-1 text-white`}
+              className={`${PATH === `${locale}` ? "bg-primary rounded-0" : "bg-gray text-black rounded-0"} px-3 py-1 text-white`}
             >
               {locale}
             </Link>

@@ -36,7 +36,7 @@ export default function Signup({lang}:{lang:any}) {
           </form>
           <div className="mt-4 text-center text-sm">
             Already have an account?
-            <Link className="underline" href={`/${lang}/signin`}>
+            <Link className="underline" href={`/${lang}/login`}>
               Sign In
             </Link>
           </div>

@@ -2,18 +2,18 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Locale, i18n } from '@/i18n.config'
 import Header from './components/header'
+import { Toaster } from "@/components/ui/toaster"
+import { Poppins, Sora } from 'next/font/google'
 
-import { Poppins,Sora } from 'next/font/google';
-
-import Footer from '@/components/footer/Footer';
-
+import Footer from '@/components/footer/Footer'
+import TanstackProvider from '@/providers/TanstackProvider'
 
 const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-poppins',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
-});
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -34,9 +34,12 @@ export default function RootLayout({
   return (
     <html lang={params.lang}>
       <body className={`${poppins.variable}`}>
-        <Header lang={params.lang} />
-        <main>{children}</main>
-        <Footer lang={params.lang}/>
+        <TanstackProvider>
+          <Header lang={params.lang} />
+          <main>{children}</main>
+          <Footer lang={params.lang} />
+          <Toaster />
+        </TanstackProvider>
       </body>
     </html>
   )

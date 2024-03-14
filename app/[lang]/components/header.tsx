@@ -44,11 +44,11 @@ export default async function Header({ lang }: { lang: Locale }) {
               </div>
             </Link>
 
-            {/* <Link href={`/${lang}/signin`}>
-              <button className='rounded-lg bg-tertiary px-6 py-1 text-white shadow-lg hover:cursor-pointer  hover:bg-indigo-700'>
+            <Link href={`/${lang}/login`}>
+              <button className='rounded-xl bg-tertiary px-6 py-1 text-white shadow-lg hover:cursor-pointer  hover:bg-indigo-700'>
                 Login
               </button>
-            </Link> */}
+            </Link>
           </div>
           <div className='hidden lg:flex'>
             <LocaleSwitcher />
